@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Калькулятор сложного процента</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/calc.css')}}">
+</head>
+<body>
+  <div class="container">
+    <form method="post">
+      <h2>Калькулятор сложного процента</h2>
+      <div class="form-group">
+        <label for="sum">Сумма:</label>
+        <input type="text" id="sum" name="sum" required>
+      </div>
+      <div class="form-group">
+        <label for="perc">Процент в год:</label>
+        <input type="text" id="perc" name="perc" required>
+      </div>
+      <div class="form-group">
+        <label for="srok">Срок:</label>
+        <input type="text" id="srok" name="srok" required>
+      </div>
+      <button type="submit">Расчитать</button>
+      {% if itog %}
+        <p>{{ itog }}</p>
+      {% endif %}
+    </form>
+  </div>
+</body>
+</html>
